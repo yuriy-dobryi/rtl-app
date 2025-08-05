@@ -42,13 +42,14 @@ import ListAccordion from '~/components/Paper/ListAccordion';
 import DropdownSelector from '~/components/Paper/DropdownSelector';
 import ModalExample from '~/components/Paper/ModalExample';
 import RadiobuttonGroup from '~/components/Paper/RadiobuttonGroup';
-import SearchbarExample from '~/components/Paper/SearchBarExample';
+import SearchbarExample from '~/components/Paper/SearchbarExample';
 import SegmentedButtonsExample from '~/components/Paper/SegmentedButtonsExample';
 import SnackbarExample from '~/components/Paper/SnackbarExample';
 import SwitchExample from '~/components/Paper/SwitchExample';
 import Input from '~/components/Paper/Input';
 import ToggleButtonRow from '~/components/Paper/ToggleButtonRow';
 import TooltipExample from '~/components/Paper/TooltipExample';
+import AppInput from '~/components/AppInput';
 
 export type SwitchButtonProps = {
   code: SupportedLanguageCode;
@@ -76,6 +77,7 @@ const HomeBase = () => {
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   const [isCheckboxPressing, setIsCheckboxPressing] = useState(false);
   const [isChipPressing, setIsChipPressing] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
   const theme = useTheme();
   const styles = styling(theme);
@@ -319,6 +321,20 @@ const HomeBase = () => {
 
           <Collapsible title="Tooltip">
             <TooltipExample />
+          </Collapsible>
+
+          <Collapsible title="App Input">
+            <AppInput
+              value={inputValue}
+              onChangeText={setInputValue}
+              placeholder="Your password"
+              autoCapitalize="none"
+              secureTextEntry
+              validationMessage={
+                !inputValue ? 'This field cannot be empty!' : undefined
+              }
+              validationMode="onInteract"
+            />
           </Collapsible>
         </ScrollView>
       )}
