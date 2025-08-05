@@ -5,7 +5,7 @@
 import { StyleSheet, View } from 'react-native';
 
 import ShareTsx from '~/assets/icons/Share';
-import ShareSvg from '~/assets/icons/share.svg';
+import ShareSvg from '~/assets/icons/Share/share.svg';
 
 const SvgExample = () => {
   return (

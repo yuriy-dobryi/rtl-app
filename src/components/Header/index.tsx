@@ -7,7 +7,7 @@ import { Portal } from 'react-native-paper';
 
 import ThemedText from '~/components/ThemedText';
 import { Colors } from '~/theme';
-import ArrowLeft from '~/assets/icons/ArrowLeft';
+import ArrowLeft from '~/assets/icons/arrow-left';
 import Container from '../Container';
 
 // import type { ParamListBase } from '@react-navigation/native';
@@ -86,11 +86,7 @@ export default ({
           <View style={[styles.centerContainer, alignEvenly && { flex: 1 }]}>
             {showDragIcon && <View style={styles.draggableIcon} />}
             {title ? (
-              <ThemedText
-                h3
-                black
-                style={styles.flexShrink_1}
-                numberOfLines={1}>
+              <ThemedText h3 style={styles.flexShrink_1} numberOfLines={1}>
                 {title}
               </ThemedText>
             ) : (

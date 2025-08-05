@@ -14,7 +14,7 @@ const Colors = {
     error: '#ff9d9a',
   },
   dark: {
-    screen: 'red',
+    screen: '#345466ff',
     tPrimary: '#fff',
     icon: '#DC9394',
     bgHeader: 'rgb(6, 6, 6)',

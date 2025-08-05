@@ -20,7 +20,7 @@ interface Props extends SafeAreaViewProps {
 
 const containerTheme = StyleSheet.create({
   header: {
-    backgroundColor: Colors.light.black,
+    backgroundColor: Colors.light.bgHeader,
   },
   content: {
     flex: 1,
