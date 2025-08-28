@@ -20,19 +20,37 @@
       "supportsTablet": true,
       "bundleIdentifier": "com.yuriy.dobryi.rtl-app",
       "infoPlist": {
-        "CFBundleAllowMixedLocalizations": true
+        "CFBundleAllowMixedLocalizations": true,
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
+      "package": "com.yuriy.dobryi.rtlapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.yuriy.dobryi.rtlapp"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [["expo-splash-screen"], "expo-font"]
+    "plugins": [
+      "expo-build-properties",
+      "expo-splash-screen",
+      "expo-font",
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "yuriy-0p"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "540c813f-9a3c-4936-881f-8ae5cf09ee9d"
+      }
+    }
   }
 }

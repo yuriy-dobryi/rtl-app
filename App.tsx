@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import { ActivityIndicator } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as Sentry from '@sentry/react-native';
 import '~/i18n';
 
 import { useAppSetup } from '~/hooks/useAppSetup';
@@ -35,4 +36,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Sentry.wrap(App);
