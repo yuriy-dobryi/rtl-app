@@ -33,5 +33,3 @@ const initI18n = async () => {
 };
 
 initI18n();
-
-export default i18n;

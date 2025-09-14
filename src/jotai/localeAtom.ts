@@ -10,7 +10,8 @@ export enum SupportedLanguageCode {
 }
 
 const locale = getLocales()[0];
-const isSystemLanguageSupported = locale?.languageCode in SupportedLanguageCode;
+const isSystemLanguageSupported =
+  locale?.languageCode.toUpperCase() in SupportedLanguageCode;
 
 const defaultLanguageCode = isSystemLanguageSupported
   ? (locale.languageCode as SupportedLanguageCode)
